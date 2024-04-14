@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 #iMPORTAMOS ENLACES DE OTRAS CARPETAS
 from frontend.Izquierda.izquierda import variable
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BBOTSTRAP])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 miVariable = dbc.Container([
     html.H1("Texto 50"),
