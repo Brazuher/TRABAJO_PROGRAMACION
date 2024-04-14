@@ -8,7 +8,7 @@ derecha = dbc.Container([
     ## formula cálculo a 0,1 pulgadas
     html.Div([
             html.Label('Cálculo a 0,1 pulgadas'),
-            dcc.Input(id = 'valor de la deformación', value = 1 , type = 'number'),
+            dbc.Input(id = 'valor de la deformación', value = 1 , type = 'number'),
             html.Label(id = 'CBR 0,1"'),])
 ])
 
