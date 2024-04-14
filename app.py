@@ -15,9 +15,9 @@ miVariable = dbc.Container([
 app.layout = dbc.Container([
     html.H1('Calculo de CBR'),
     dbc.Row([
-        dbc.Col('CALCULO DE CBR', md=12, style={'background-color':'blue'}),
-        dbc.Col('Ensayo', md=6, style={'background-color':'red'}),
-        dbc.Col('Datos de entrada', md=6, style={'background-color':'yellow'}),
+        dbc.Col('CALCULO DE CBR', md=12, style={'background-color':'#FFD700'}),
+        dbc.Col('Ensayo', md=6, style={'background-color':'#DCDCDC'}),
+        dbc.Col('Datos de entrada', md=6, style={'background-color':'#F0E68C'}),
     ])
 ])
 
