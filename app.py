@@ -6,6 +6,7 @@ import dash_bootstrap_components as dbc
 from frontend.Derecha.derecha import derecha
 from frontend.Izquierda.izquierda import variable
 from frontend.derechainferior.derechainferior import derechainferior
+from frontend.izquierdainferior.izquierdainferior import izquierdainferior
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 miVariable = dbc.Container([
     html.H1("Texto 50"),
@@ -20,7 +21,8 @@ app.layout = dbc.Container (
         dbc.Col(variable, md=8, style={'background-color':'#F0E68C'}),
         
     html.H2( style={'background-color':'#FFD700','textAlign': 'center'}),
-    dbc.Col(derechainferior,md=4, style={'background-color':'#DCDCDC'})
+    dbc.Col(derechainferior,md=4, style={'background-color':'#DCDCDC'}),
+    dbc.Col(izquierdainferior,md=8, style={'background-color': '#DCDCDC'}),
     
 ])
     ])
