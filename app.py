@@ -21,8 +21,7 @@ app.layout = dbc.Container (
         dbc.Col(variable, md=8, style={'background-color':'#F0E68C'}),
         
     html.H2( style={'background-color':'#FFD700','textAlign': 'center'}),
-    dbc.Col(derechainferior,md=4, style={'background-color':'#DCDCDC'}),
-    dbc.Col(izquierdainferior,md=8, style={'background-color': '#DCDCDC'}),
+    dbc.Col(izquierdainferior,md=8, style={'background-color': '#DCDCDC', 'margin-left':'auto'}),
     
 ])
     ])
