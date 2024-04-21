@@ -9,8 +9,8 @@ from frontend.Izquierda.izquierda import izquierda
 
 layout = dbc.Container([
     dbc.Row([
-        dbc.Col('izquierda', md=6, style={'background-color':'red'}),
-        dbc.Col('derecha', md=6, style={'background-color':'blue'}),
+        dbc.Col('Izquierda', md=6, style={'background-color':'red'}),
+        dbc.Col('Derecha', md=6, style={'background-color':'blue'}),
     ])
     
 ])
