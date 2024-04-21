@@ -8,7 +8,7 @@ import pandas as pd
 from frontend.Derecha.derecha import derecha
 from frontend.Izquierda.izquierda import variable
 from frontend.derechainferior.derechainferior import derechainferior
-from frontend.izquierdainferior.izquierdainferior import izquierdainferior
+from frontend.Izquierda.izquierda import izquierdainferior
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 miVariable = dbc.Container([
     html.H1("Texto 50"),
@@ -17,15 +17,17 @@ miVariable = dbc.Container([
 
 app.layout = dbc.Container (
     [
-    html.H1('CÁLCULO DE CBR',  style={'background-color':'#FFD700','textAlign': 'center'}),
+    html.H1('CÁLCULO DE CBR',  style={'background-color':'#FFD700','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold", "font-size": "65px"}),
     dbc.Row([
-        dbc.Col(derecha, md=4, style={'background-color':'#DCDCDC'}),
-        dbc.Col(variable, md=8, style={'background-color':'#F0E68C'}),
-        
-    html.H2( style={'background-color':'#FFD700','textAlign': 'center'}),
-    dbc.Col(izquierdainferior,md=8, style={'background-color': '#DCDCDC', 'margin-left':'auto'}),
+        dbc.Col(derecha, md=4, style={'background-color':'#DCDCDC', "height":"100 vh", "padding": "20px"}),
+        dbc.Col(variable, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
+        html.Div([
+        dbc.Col(izquierdainferior,md=12, style={'background-color': '#DCDCDC', 'margin-left':'auto',"padding":"20px"}),
+    ]),
     
-])
+]),
+    
+    
     ])
 
 if __name__ == '__main__':

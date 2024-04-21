@@ -5,7 +5,7 @@ import pandas as pd
 import dash_html_components as html
 
 variable = dbc.Container([
-    html.H1("DATOS DE ENTRADA", style={'background-color':'#DCDCDC','textAlign': 'center'}),
+    html.H1("DATOS DE ENTRADA", style={'background-color':'#DCDCDC','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold"}),
     dash_table.DataTable(
         id='Tabla_CBR',
         columns=[
@@ -16,9 +16,17 @@ variable = dbc.Container([
             {'name':'Esfuerzo','id':'Esfuerzo','editable': False},
             {'name':'CBR_1_%','id':'CBR_1_%','editable': False},
             {'name':'CBR_2_%','id':'CBR_2_%','editable': False},
+            
             ],
+        
         # data =
 
-    )
+    ),
+
+    
 ])
+
+izquierdainferior = dbc.Container([
+        html.H1('Gráfica esfuerzo deformación', style={'background-color':'#F0E68C','textAlign': 'center',"font-family": "Calibri Light, sans-serif","font-weight": "bold"}),
+    ]),
 
