@@ -21,12 +21,15 @@ app.layout = dbc.Container (
     dbc.Row([
         dbc.Col(derecha, md=4, style={'background-color':'#DCDCDC', "height":"100 vh", "padding": "20px"}),
         dbc.Col(variable, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
-        html.Div([
-        dbc.Col(izquierdainferior,md=12, style={'background-color': '#DCDCDC', 'margin-left':'auto',"padding":"20px"}),
-    ]),
+    
     
 ]),
-    
+
+
+html.H2(),
+    dbc.Row([
+        dbc.Col(izquierdainferior,md=12, style={'background-color': '#DCDCDC', 'margin-left':'auto',"padding":"20px"}),
+    ]),
     
     ])
 
