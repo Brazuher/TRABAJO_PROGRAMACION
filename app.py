@@ -1,6 +1,8 @@
 import dash
-from dash import html, dcc
+from dash import html, dcc, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
+import pandas as pd
+
 
 #IMPORTAMOS LAS VARIABLES DE OTRAS CARPETAS
 from frontend.Derecha.derecha import derecha
