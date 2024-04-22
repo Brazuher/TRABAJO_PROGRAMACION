@@ -63,4 +63,4 @@ cbr= pd.DataFrame({ #Creamos Dataframe del CBR
     "Area_(pulg)": Area
 })
 
-cbr["Esfuerzo"]
+cbr["Esfuerzo"]=cbr["Carga"].sum()/cbr["Area"].sum()  #Se crea la columna ESFUERZO y se realiza la division entre carga y area.

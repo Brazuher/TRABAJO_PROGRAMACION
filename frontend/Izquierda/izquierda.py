@@ -4,7 +4,15 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import dash_html_components as html
 
-variable = dbc.Container([
+#Importamos Backend
+from backend.tabla import cbr
+
+
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+#Layout
+
+app.layout = dbc.Container([
     html.H1("DATOS DE ENTRADA", style={'background-color':'#DCDCDC','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold"}),
     dash_table.DataTable(
         id='Tabla_CBR',
@@ -16,12 +24,10 @@ variable = dbc.Container([
             {'name':'Esfuerzo','id':'Esfuerzo','editable': False},
             {'name':'CBR_1_%','id':'CBR_1_%','editable': False},
             {'name':'CBR_2_%','id':'CBR_2_%','editable': False},
-            
             ],
-        
-         
-
+         data= cbr.to_dict('records') 
     ),
+
 
     
 ])

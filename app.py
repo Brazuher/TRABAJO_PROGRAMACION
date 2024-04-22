@@ -3,7 +3,6 @@ from dash import html, dcc, Input, Output, callback, dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
 
-#Importamos Backend
 
 #IMPORTAMOS LAS VARIABLES DE OTRAS CARPETAS
 from frontend.Derecha.derecha import derecha
