@@ -21,7 +21,7 @@ app.layout = dbc.Container (
     html.H1('CÁLCULO DE CBR',  style={'background-color':'#FFD700','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold", "font-size": "65px"}),
     dbc.Row([
         dbc.Col(derecha, md=4, style={'background-color':'#DCDCDC', "height":"100 vh", "padding": "20px"}),
-        dbc.Col(app, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
+        dbc.Col(variable, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
     
     
 ]),
