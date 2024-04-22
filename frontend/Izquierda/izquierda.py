@@ -5,7 +5,7 @@ import pandas as pd
 import dash_html_components as html
 
 #Importamos Backend
-from backend import cbr 
+from backend.backend import cbr
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
