@@ -19,7 +19,7 @@ variable = dbc.Container([
             
             ],
         
-        # data =
+         
 
     ),
 

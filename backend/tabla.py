@@ -63,4 +63,4 @@ cbr= pd.DataFrame({ #Creamos Dataframe del CBR
     "Area_(pulg)": Area
 })
 
-cbr["Esfuerzo"]=cbr["Carga"]/cbr["Area"]
+cbr["Esfuerzo"]
