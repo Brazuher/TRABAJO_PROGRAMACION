@@ -13,7 +13,7 @@ Lectura=[ #Para cada lectura
     "7",
     "8",
     "9",
-    "10"
+    "10",
 ]
 
 Carga=[
@@ -26,7 +26,7 @@ Carga=[
     "56.20",
     "62.49",
     "69.01",
-    "76.88"
+    "76.88",
 ]
 
 Deformacion=[
@@ -39,7 +39,7 @@ Deformacion=[
     "0.440",
     "0.502",
     "0.564",
-    "0.626"
+    "0.626",
 ]
 
 Area=[
@@ -53,6 +53,10 @@ Area=[
    "28.27", 
    "28.27",
    "28.27",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01755934b64b517efa5ac5743ab9d9aef188d65f
 ]
 
 cbr= pd.DataFrame({ #Creamos Dataframe del CBR

@@ -6,7 +6,7 @@ import pandas as pd
 
 #IMPORTAMOS LAS VARIABLES DE OTRAS CARPETAS
 from frontend.Derecha.derecha import derecha
-from frontend.Izquierda.izquierda import variable
+from frontend.Izquierda.izquierda import app
 from frontend.derechainferior.derechainferior import derechainferior
 from frontend.Izquierda.izquierda import izquierdainferior
 from backend import cbr
@@ -21,7 +21,7 @@ app.layout = dbc.Container (
     html.H1('CÁLCULO DE CBR',  style={'background-color':'#FFD700','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold", "font-size": "65px"}),
     dbc.Row([
         dbc.Col(derecha, md=4, style={'background-color':'#DCDCDC', "height":"100 vh", "padding": "20px"}),
-        dbc.Col(variable, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
+        dbc.Col(app, md=8, style={'background-color':'#F0E68C',"padding": "20px",'margin-left':'auto'}),
     
     
 ]),
