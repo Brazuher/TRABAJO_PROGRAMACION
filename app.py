@@ -9,6 +9,7 @@ from frontend.Derecha.derecha import derecha
 from frontend.Izquierda.izquierda import variable
 from frontend.derechainferior.derechainferior import derechainferior
 from frontend.Izquierda.izquierda import izquierdainferior
+from backend import cbr
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 miVariable = dbc.Container([
     html.H1("Texto 50"),

@@ -5,14 +5,14 @@ import pandas as pd
 import dash_html_components as html
 
 #Importamos Backend
-from backend.backend import cbr 
+from backend import cbr 
 
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 #Layout
 
-app.layout = dbc.Container([
+variable = dbc.Container([
     html.H1("DATOS DE ENTRADA", style={'background-color':'#DCDCDC','textAlign': 'center',"font-family": "Calibri Light, sans-serif", "font-weight": "bold"}),
     dash_table.DataTable(
         id='Tabla_CBR',
