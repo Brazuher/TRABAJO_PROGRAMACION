@@ -6,7 +6,7 @@ import pandas as pd
 
 #IMPORTAMOS LAS VARIABLES DE OTRAS CARPETAS
 from frontend.Derecha.derecha import derecha
-from frontend.Izquierda.izquierda import app
+from frontend.Izquierda.izquierda import variable
 from frontend.derechainferior.derechainferior import derechainferior
 from frontend.Izquierda.izquierda import izquierdainferior
 from backend.backend import cbr
