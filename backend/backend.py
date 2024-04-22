@@ -53,13 +53,9 @@ Area=[
    "28.27", 
    "28.27",
    "28.27",
-<<<<<<< HEAD
-=======
-
->>>>>>> 01755934b64b517efa5ac5743ab9d9aef188d65f
 ]
 
-cbr= pd.DataFrame({ #Creamos Dataframe del CBR
+cbr = pd.DataFrame({ #Creamos Dataframe del CBR
     "Lectura": Lectura,
     "Carga_(lbf)": Carga,
     "Deformación_(pulg)": Deformacion,
