@@ -29,6 +29,18 @@ variable = dbc.Container([
     
 ])
 
+@variable.callback(
+    Output('Tabla_CBR','data'),
+    Input('Tabla_CBR','data'),
+    Input('tabla_cbr', 'columns')
+)
+
+def update_cbr_table(rows, columns):
+    cbr = pd.DataFrame(rows)
+    cbr["Carga"] = cbr ["Carga"].astype("int")
+    cbr["Esfuerzo"]=cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)
+    return cbr.to_dict('records') 
+
 izquierdainferior = dbc.Container([
         html.H1('Gráfica esfuerzo deformación', style={'background-color':'#F0E68C','textAlign': 'center',"font-family": "Calibri Light, sans-serif","font-weight": "bold"}),
     ]),
