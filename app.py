@@ -1,5 +1,4 @@
-import dash
-from dash import html, dcc, Input, Output, callback, dash_table
+from dash import Dash, html, Input, Output,dcc,State,dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
 
@@ -7,10 +6,9 @@ import pandas as pd
 #IMPORTAMOS LAS VARIABLES DE OTRAS CARPETAS
 from frontend.Derecha.derecha import derecha
 from frontend.Izquierda.izquierda import variable
-from frontend.derechainferior.derechainferior import derechainferior
-from frontend.Izquierda.izquierda import izquierdainferior
-from backend.backend import cbr
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+from frontend.izquierdainferior.izquierdainf import izquierdainferior
+from backend.backend2 import cbr
+app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 miVariable = dbc.Container([
     html.H1("Texto 50"),
     html.H2("Subtexto"),
@@ -33,6 +31,24 @@ html.H2(),
     ]),
     
     ])
+
+
+@app.callback(
+    Output('Tabla_CBR','data'),
+    Input('Tabla_CBR','data'),
+    Input('Tabla_CBR', 'columns')
+)
+
+def update_cbr_table(rows, columns):
+    cbr = pd.DataFrame(rows)
+    cbr["Carga_(lbf)"] = cbr ["Carga_(lbf)"].astype("int")
+    cbr["Esfuerzo"]=cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)
+    return cbr.to_dict('records') 
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
