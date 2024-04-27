@@ -42,7 +42,9 @@ html.H2(),
 def update_cbr_table(rows, columns):
     cbr = pd.DataFrame(rows)
     cbr["Carga_(lbf)"] = cbr ["Carga_(lbf)"].astype("int")
-    cbr["Esfuerzo"]=cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)
+    cbr["Esfuerzo"]= cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)
+    cbr["CBR_1_%"]= cbr["Esfuerzo"]/1000
+    cbr["CBR_2_%"]= cbr["Esfuerzo"]/1500
     return cbr.to_dict('records') 
 
 
