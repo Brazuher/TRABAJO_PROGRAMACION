@@ -1,5 +1,6 @@
 from dash import Dash, html, Input, Output,dcc,State,dash_table
 import dash_bootstrap_components as dbc
+import plotly.graph_objs as go
 import pandas as pd
 
 
@@ -47,8 +48,25 @@ def update_cbr_table(rows, columns):
     cbr["CBR_2_%"]= cbr["Esfuerzo"]/1500
     return cbr.to_dict('records') 
 
+@app.callback(
+        Output("cbr-plot","figure"),
+        Input("Tabla_CBR", "data")
 
+)
 
+def update_cbr_plot(rows):
+
+    cbr = pd.DataFrame(rows)
+
+    trace = go.Scatter(
+        x=cbr["Deformación_(pulg)"],
+        y=cbr["Esfuerzo"],
+        mode= 'lines',
+        line=dict(color="blue", width=3),
+        name= "Esfuerzo vs Deformación"
+    )
+
+    return {'data' : [trace]}
 
 
 
