@@ -64,4 +64,5 @@ cbr = pd.DataFrame({ #Creamos Dataframe del CBR
 })
 
 cbr["Esfuerzo"] = cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)  #Se crea la columna ESFUERZO y se realiza la division entre carga y area.
-cbr["CBR_1_%"]=cbr["Esfuerzo"]/1000 
+cbr["CBR_1_%"]= cbr["Esfuerzo"]/1000 
+cbr["CBR_2_%"]= cbr["Esfuerzo"]/1500

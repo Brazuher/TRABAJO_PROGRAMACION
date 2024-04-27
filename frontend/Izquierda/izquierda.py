@@ -25,8 +25,5 @@ variable = dbc.Container([
             ],
          data= cbr.to_dict('records') 
     ),
-    dcc.Graph(id="cbr-plot")
-
-
     
 ])
