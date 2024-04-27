@@ -55,18 +55,29 @@ def update_cbr_table(rows, columns):
 )
 
 def update_cbr_plot(rows):
-
     cbr = pd.DataFrame(rows)
 
     trace = go.Scatter(
         x=cbr["Deformación_(pulg)"],
         y=cbr["Esfuerzo"],
         mode= 'lines',
-        line=dict(color="blue", width=3),
-        name= "Esfuerzo vs Deformación"
+        line=dict(color="#F0E68C", width=3),
+        name= 'Grafica Esfuerzo vs Deformación'
     )
 
-    return {'data' : [trace]}
+    layout = go.Layout(
+        title='Grafica Esfuerzo vs Deformación',
+        xaxis=dict(
+            title='Deformación_(pulg)',
+            autorange=True
+        ),
+        yaxis=dict(
+            title='Esfuerzo (PSI)',
+            autorange=True
+        )
+    )
+
+    return {'data' : [trace], 'layout': layout}
 
 
 
