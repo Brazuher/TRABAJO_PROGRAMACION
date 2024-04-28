@@ -25,7 +25,10 @@ variable = dbc.Container([
             {'name':'CBR_1_%','id':'CBR_1_%','editable': False, 'type': 'numeric', 'format': Format(precision=2)},
             {'name':'CBR_2_%','id':'CBR_2_%','editable': False, 'type': 'numeric', 'format': Format(precision=2)},
             ],
-         data= cbr.to_dict('records') 
+        
+         data= cbr.to_dict('records'),
+        style_data={'fontSize': '16px', 'font-family': 'Calibri Light, sans-serif', 'textAlign': 'center','backgroundColor': '#f2f2f2', 'color': 'black'},  # Estilo para los datos
+        style_header={'fontSize': '18px', 'font-family': 'Calibri Light, sans-serif', 'textAlign': 'center', 'backgroundColor': '#FFD700', 'color': 'black', "font-weight": "bold"},  # Estilo para los encabezados
     ),
     
 ])
