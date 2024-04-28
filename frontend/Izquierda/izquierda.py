@@ -30,5 +30,7 @@ variable = dbc.Container([
         style_data={'fontSize': '16px', 'font-family': 'Calibri Light, sans-serif', 'textAlign': 'center','backgroundColor': '#f2f2f2', 'color': 'black'},  # Estilo para los datos
         style_header={'fontSize': '18px', 'font-family': 'Calibri Light, sans-serif', 'textAlign': 'center', 'backgroundColor': '#FFD700', 'color': 'black', "font-weight": "bold"},  # Estilo para los encabezados
     ),
+   
+    html.P("*Por favor ingrese los datos de Carga, Deformación y Area (el area corresponde por igual en cada dato)", style={"font-family": "Calibri Light, sans-serif"}),
     
 ])
