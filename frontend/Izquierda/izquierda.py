@@ -5,7 +5,8 @@ import pandas as pd
 import dash_html_components as html
 
 #Importamos Backend
-from backend.backend import cbr
+
+from backend.backend2 import cbr
 
 #Layout
 
@@ -19,29 +20,10 @@ variable = dbc.Container([
             {'name':'Deformación_(pulg)','id':'Deformación_(pulg)','editable': True},
             {'name':'Area_(pulg)','id':'Area_(pulg)','editable': True},
             {'name':'Esfuerzo','id':'Esfuerzo','editable': False},
-            {'name':'CBR_1_%','id':'CBR_1_%','editable': False},
-            {'name':'CBR_2_%','id':'CBR_2_%','editable': False},
+            {'name':'CBR_1_%','id':'CBR_1','editable': False},
+            {'name':'CBR_2_%','id':'CBR_2','editable': False},
             ],
          data= cbr.to_dict('records') 
     ),
-
-
     
 ])
-
-@variable.callback(
-    Output('Tabla_CBR','data'),
-    Input('Tabla_CBR','data'),
-    Input('tabla_cbr', 'columns')
-)
-
-def update_cbr_table(rows, columns):
-    cbr = pd.DataFrame(rows)
-    cbr["Carga"] = cbr ["Carga"].astype("int")
-    cbr["Esfuerzo"]=cbr["Carga_(lbf)"].astype(float) / cbr["Area_(pulg)"].astype(float)
-    return cbr.to_dict('records') 
-
-izquierdainferior = dbc.Container([
-        html.H1('Gráfica esfuerzo deformación', style={'background-color':'#F0E68C','textAlign': 'center',"font-family": "Calibri Light, sans-serif","font-weight": "bold"}),
-    ]),
-
